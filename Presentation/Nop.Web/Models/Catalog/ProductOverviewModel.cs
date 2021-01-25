@@ -14,7 +14,10 @@ namespace Nop.Web.Models.Catalog
             DefaultPictureModel = new PictureModel();
             SpecificationAttributeModels = new List<ProductSpecificationModel>();
             ReviewOverviewModel = new ProductReviewOverviewModel();
+            VendorModel = new VendorBriefInfoModel();
         }
+
+        public VendorBriefInfoModel VendorModel { get; set; }
 
         public string Name { get; set; }
         public string ShortDescription { get; set; }

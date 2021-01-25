@@ -40,20 +40,23 @@
             <h3 class="product-title">
                 <a href="@Url.RouteUrl("Product", new {SeName = Model.SeName})">@Model.Name</a>
             </h3>
+            <h3 class="vendor-title">
+                <a href="@Url.RouteUrl("Vendor", new { SeName = Model.VendorModel.SeName })">@Model.VendorModel.Name</a>
+            </h3>
             @if (catalogSettings.ShowSkuOnCatalogPages && !string.IsNullOrEmpty(Model.Sku))
             {
                 <div class="sku">
                     @Model.Sku
                 </div>
-            }
+                }
             <div class="product-border-bottom"></div>
             @if (Model.ReviewOverviewModel.AllowCustomerReviews)
-            {
-                var ratingPercent = 0;
-                if (Model.ReviewOverviewModel.TotalReviews != 0)
                 {
-                    ratingPercent = ((Model.ReviewOverviewModel.RatingSum * 100) / Model.ReviewOverviewModel.TotalReviews) / 5;
-                }
+                    var ratingPercent = 0;
+                    if (Model.ReviewOverviewModel.TotalReviews != 0)
+                    {
+                        ratingPercent = ((Model.ReviewOverviewModel.RatingSum * 100) / Model.ReviewOverviewModel.TotalReviews) / 5;
+                    }
                 <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, Model.ReviewOverviewModel.TotalReviews)">
                     <div class="rating">
                         <div style="width: @(ratingPercent)%">
@@ -76,7 +79,7 @@
                         <span class="price actual-price">@Model.ProductPrice.Price</span>
                         @if (Model.ProductPrice.DisplayTaxShippingInfo)
                         {
-                            var inclTax = workContext.TaxDisplayType == TaxDisplayType.IncludingTax;
+                var inclTax = workContext.TaxDisplayType == TaxDisplayType.IncludingTax;
                             //tax info is already included in the price (incl/excl tax). that's why we display only shipping info here
                             //of course, you can modify appropriate locales to include VAT info there
                             <span class="tax-shipping-info">

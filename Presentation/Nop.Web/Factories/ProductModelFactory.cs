@@ -1130,6 +1130,18 @@ namespace Nop.Web.Factories
                 //reviews
                 model.ReviewOverviewModel = PrepareProductReviewOverviewModel(product);
 
+                var vendor = _vendorService.GetVendorById(product.VendorId);
+                if (vendor != null && !vendor.Deleted && vendor.Active)
+                {
+                    var languageId = _workContext.WorkingLanguage.Id;
+                    model.VendorModel = new VendorBriefInfoModel
+                    {
+                        Id = vendor.Id,
+                        Name = _localizationService.GetLocalized(vendor, v => v.Name, languageId, true, false),
+                        SeName = _urlRecordService.GetSeName(vendor, languageId, true, false)
+                    };
+                }
+
                 models.Add(model);
             }
 
