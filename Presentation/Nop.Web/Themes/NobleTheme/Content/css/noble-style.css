@@ -380,13 +380,14 @@ a.eu-cookie-privacyinfo-tag{color:#B80709 !important;text-decoration:underline;}
 .item-box .product-item .product-title{overflow:hidden;margin:0px;height:40px;line-height:18px;}
 .item-box.product-grid .product-border-bottom{background: #e7e7e7;height:1px;margin:5px auto 15px;width:50%;}
 .item-box.product-grid .add-info{border-top:1px solid #e7e7e7;}
-.item-box .btn.btn-primary.product-box-add-to-cart-button{background: url('../images/cart-icon.png') no-repeat center center;border:3px solid #dddddd;border-radius:50%;height:40px;width:40px;text-indent:-999999px;}
-.item-box .add-to-wishlist-button{background: url('../images/wishlist-icon.png') no-repeat center center;border:3px solid #dddddd;border-radius:50%;height:40px;width:40px;text-indent:-999999px;}
-.product-addtocart-wrapper,.wishlist-btn-wrapper{width:30%;float:left;text-align:center;}
-.item-box.product-grid .prices{width:40%;float:left;text-align:center;border-right: 1px solid #e7e7e7;border-left: 1px solid #e7e7e7;}
-.product-grid .item-box.product-grid .product-item .add-info .buttons{float:left;width:100%;}
-.wishlist-btn-wrapper{padding:10px 0px;border-left:1px solid #e7e7e7;margin-left: -1px;}
-.product-addtocart-wrapper{padding:10px 0px;border-right:1px solid #e7e7e7;margin-right: -1px;}
+.item-box .btn.btn-primary.product-box-add-to-cart-button{background: url('../images/cart-icon.png') no-repeat center center;border:3px solid #dddddd;height:40px;width:90px;text-indent:-999999px;}
+.item-box .add-to-wishlist-button{background: url('../images/wishlist-icon.png') no-repeat center center;background-size: 22px;border:3px solid #dddddd;border-radius:50%;height:40px;width:40px;text-indent:-999999px;}
+.product-addtocart-wrapper{float:left;text-align:center;}
+.wishlist-btn-wrapper{width:25%;float:right;position:relative;z-index:1;}
+.item-box.product-grid .prices{width:40%;float:left;text-align:center;}
+.product-grid .item-box.product-grid .product-item .add-info .buttons{display:flex;justify-content:space-around;align-items:center;}
+.wishlist-btn-wrapper{padding:10px 0px;margin-left: -1px;}
+.product-addtocart-wrapper{padding:10px 10px;margin-right: -1px;}
 .item-box .prices span {padding: 0 10px;line-height: 26px;font-size: 14px;font-weight: 700;color: #646464;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;float:left;}
 .product-grid.home-page-product-grid .item-box:nth-child(3n+1) {
     clear: none;
